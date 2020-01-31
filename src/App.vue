@@ -1,19 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <!-- <router-link to="/">Home</router-link> | -->
+      <!-- <router-link to="/about">About</router-link> -->
+      <router-view/>
+      <main-tab-bar/>
     </div>
     <router-view />
   </div>
 </template>
 
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+<script>
+import MainTabBar from "components/content/mainTabbar/MainTabBar";
+
+export default {
+  name: "app",
+  components: {
+    MainTabBar
+  }
+};
+</script>
+
+<style>
+@import "assets/css/base.css";
 </style>
