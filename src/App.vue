@@ -6,13 +6,12 @@
       <router-view/>
       <main-tab-bar/>
     </div>
-    <router-view />
+    <!-- <router-view /> -->
   </div>
 </template>
 
 <script>
 import MainTabBar from "components/content/mainTabbar/MainTabBar";
-
 export default {
   name: "app",
   components: {
